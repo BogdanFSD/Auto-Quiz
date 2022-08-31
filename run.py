@@ -82,11 +82,58 @@ class Game:
         print()
 
 
+def greetings():
+    """
+    functoins that asks the name of the user
+    and prints out questions
+    """
+    print(Fore.LIGHTRED_EX+'*' * 50)
+    print()
+    print(Fore.LIGHTMAGENTA_EX+'            WELCOME TO AUTO QUIZ')
+    print()
+    print(r"""
+                        ______--------___
+                  /|             / |
+      o___________|_\__________/__|
+      ]|___     |  |=   ||  =|___  |"
+      //   \\    |  |____||_///   \\|"
+      |  X  |\--------------/|  X  |\"
+       \___/                  \___/
+         """)
+    print(Fore.LIGHTRED_EX+'*' * 50)
+    print()
+    start = input(Fore.LIGHTBLUE_EX+" Are you ready\
+ for a rummmmmmble? (Yes/No) ")
+
+    while True:
+
+        if start.lower() == "yes":
+            print("great")
+            print('')
+            while game.question_left():
+                game.n_question()  # prints the questions
+            print(Fore.LIGHTYELLOW_EX+'    You finish this AUTO\
+ Quiz. Thank you! See you later!!!')
+            return True
+
+        elif start.lower() == "no":
+            print('byeeeeee')
+            quit()
+
+        else:
+            print(Fore.LIGHTRED_EX+"Invalid entry. Please try again  ")
+            print()
+            start = input(Fore.LIGHTBLUE_EX+f"{name} are you\
+ ready for a rummmmmmble? (Yes/No) ")
+
+
+
+
+
 prepare_quiz_questions()
 game = Game(question_list)
+greetings()
 
-while game.question_left():
-    game.n_question()
 
 
 
