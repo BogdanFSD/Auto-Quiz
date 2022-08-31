@@ -1,4 +1,29 @@
-def greeting_screen():
+from questions import question_list
+import random
+
+
+
+
+
+
+def prepare_quiz_questions():
+    """
+   Function that will randomize order of our
+   questions for a quiz
+   """
+    random.shuffle(question_list)
+
+
+
+
+
+
+
+
+
+
+
+"""def greeting_screen():
     print("Welcome to a Fun Car Quiz! \nAre you ready to check your knowledge?")
     print("There are total of 4 question and 4 answers to each of them. Once you are done with all question you will receive your score.")
     print(r"""
@@ -125,4 +150,4 @@ choices = [
 
 if __name__ == "__main__":
     greeting_screen()
-
+"""
