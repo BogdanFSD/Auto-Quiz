@@ -50,7 +50,8 @@ def show_points(correct_attempts, attempts):
         print(i)
     print()
 
-    
+    score = int((correct_attempts/len(questions))*100)
+    print("your score is " + str(score)+ "%")
 
 def restart():
     pass
