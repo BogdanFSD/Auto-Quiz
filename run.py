@@ -102,7 +102,22 @@ def greetings():
          """)
     print(Fore.LIGHTRED_EX+'*' * 50)
     print()
-    start = input(Fore.LIGHTBLUE_EX+" Are you ready\
+    print(Fore.LIGHTYELLOW_EX+'    GAME INFO')
+    print()
+    print(Fore.LIGHTBLUE_EX+'This is QUIZ for people who think they\
+   KNOW  something about a AUTO World')
+    print(Fore.LIGHTBLUE_EX+'If you are one of them than E-ron-don-don!!!')
+    print()
+
+    name = input(Fore.LIGHTBLUE_EX+'What is your name stranger?  ')
+
+    if name.isnumeric():  # gives error if input numbers
+        print(Fore.LIGHTRED_EX+'Please use letters only  ')
+        name = input(Fore.LIGHTBLUE_EX+'What is your name stranger?  ')
+    print()
+
+    # validates the input
+    start = input(Fore.LIGHTBLUE_EX+f"{name} are you ready\
  for a rummmmmmble? (Yes/No) ")
 
     while True:
@@ -125,8 +140,6 @@ def greetings():
             print()
             start = input(Fore.LIGHTBLUE_EX+f"{name} are you\
  ready for a rummmmmmble? (Yes/No) ")
-
-
 
 
 
