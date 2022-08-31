@@ -68,12 +68,12 @@ class Game:
         if user_answer.upper() == answer.upper():
             self.score += 1  # Once correct increment score
             print()
-            print('corect')
+            print('CORRECT')
             print()
         elif user_answer.upper() != answer.upper():
             self.score += 0  # once worn prints statement and add 0 to score
             print()
-            print('wrong')
+            print('WRONG')
             print()
             print(f"correct is {answer}")  # shwos correct answer
             print()
@@ -112,7 +112,7 @@ def greetings():
     name = input('What is your name stranger?  ')
 
     if name.isnumeric():  # gives error if input numbers
-        print(Fore.LIGHTRED_EX+'Please use letters only  ')
+        print('Please use letters only  ')
         name = input('What is your name stranger?  ')
     print()
 
@@ -123,8 +123,10 @@ def greetings():
     while True:
 
         if start.lower() == "yes":
-            print("great")
-            print('')
+            print("Awaesome")
+            print()
+            print('Please be carefull questions are TRICKY!!!')
+            print()
             while game.question_left():
                 game.n_question()  # prints the questions
             print('    You finish this AUTO\
