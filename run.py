@@ -24,6 +24,30 @@ class Game:
         self.score = 0
         self.que_list = que_list
 
+    def n_question(self):
+        """
+        Prints question in the order of question number
+        with relevant options for answer and answer
+
+        """
+        empty_string = ''  # to give some space between text
+        nl = '\n'  # Prints questions and options from new string
+        following_q = self.que_list[self.q_number]
+        # prints each option from new line and not in the brackets
+        following_q['options'] = '\n'.join(following_q['options'])
+        self.q_number += 1  # increment question number
+        while True:   # loop that validate users answer
+            user_answer = input(f"{Fore.LIGHTMAGENTA_EX}{self.q_number})\
+ {following_q['question']}{nl}{empty_string}{nl}{Fore.LIGHTYELLOW_EX}\
+{following_q['options']}{nl} {empty_string}{Fore.LIGHTBLUE_EX}\
+ {nl}Please choose A, B, C or D  ").upper()  # prints question
+            if user_answer in {"A", "B", "C", "D"}:
+                break  # validate answer
+            else:
+                print()
+                print('Invalid entry. Please try again ')
+                print()
+
 
 
 
