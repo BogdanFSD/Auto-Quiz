@@ -1,5 +1,35 @@
 def greeting_screen():
-    pass
+    print("Welcome to a Fun Car Quiz! \nAre you ready to check your knowledge?")
+    print("There are total of 4 question and 4 answers to each of them. Once you are done with all question you will receive your score.")
+    print(r"""
+                                                ______--------___
+                                        /|             / |
+                            o___________|_\__________/__|
+                            ]|___     |  |=   ||  =|___  |"
+                            //   \\    |  |____||_///   \\|"
+                            |  X  |\--------------/|  X  |\"
+                            \___/       1924        \___/
+        """)
+
+
+    while True:
+        start = input("Are you ready for a rummmmmmble? (Yes/No) ")
+
+        if start.lower() == "yes":
+            print("great")
+            start_game()
+            return True
+
+        elif start.lower() == "no":
+            print("BYEEE")
+            quit()
+
+        else:
+            print("Invalid entry. Yes or No")
+
+            continue
+
+    start_game()
 
 def start_game():
     """
@@ -93,5 +123,6 @@ choices = [
     ]
 
 
-start_game()
+if __name__ == "__main__":
+    greeting_screen()
 
