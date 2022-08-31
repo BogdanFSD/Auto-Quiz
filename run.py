@@ -1,6 +1,8 @@
 # import randon to randomize questions
 import random
-
+# import colorama for colors
+from colorama import Fore
+colorama.init(autoreset=True)
 # import questions for our Quiz
 
 from questions import question_list
@@ -40,9 +42,9 @@ class Game:
         following_q['options'] = '\n'.join(following_q['options'])
         self.q_number += 1  # increment question number
         while True:   # loop that validate users answer
-            user_answer = input(f"{self.q_number})\
- {following_q['question']}{nl}{empty_string}{nl}\
-{following_q['options']}{nl} {empty_string}\
+            user_answer = input(f"{Fore.LIGHTMAGENTA_EX}{self.q_number})\
+ {following_q['question']}{nl}{empty_string}{nl}{Fore.LIGHTYELLOW_EX}\
+{following_q['options']}{nl} {empty_string}{Fore.LIGHTBLUE_EX}\
  {nl}Please choose A, B, C or D  ").upper()  # prints question
             if user_answer in {"A", "B", "C", "D"}:
                 break  # validate answer
@@ -68,14 +70,14 @@ class Game:
         if user_answer.upper() == answer.upper():
             self.score += 1  # Once correct increment score
             print()
-            print('Corect')
+            print(Fore.LIGHTGREEN_EX+'corect')
             print()
         elif user_answer.upper() != answer.upper():
             self.score += 0  # once worn prints statement and add 0 to score
             print()
-            print('Wrong')
+            print(Fore.LIGHTRED_EX+'wrong')
             print()
-            print(f"Correct is {answer}")  # shwos correct answer
+            print(f"correct is {answer}")  # shwos correct answer
             print()
         # shows score overall till that question included
         print(f"Current score is {self.score} out of 10")
@@ -87,9 +89,9 @@ def greetings():
     functoins that asks the name of the user
     and prints out questions
     """
-    print('*' * 50)
+    print(Fore.LIGHTRED_EX+'*' * 50)
     print()
-    print('            WELCOME TO AUTO QUIZ')
+    print(Fore.LIGHTMAGENTA_EX+'            WELCOME TO AUTO QUIZ')
     print()
     print(r"""
                         ______--------___
@@ -100,24 +102,24 @@ def greetings():
       |  X  |\--------------/|  X  |\"
        \___/                  \___/
          """)
-    print('*' * 50)
+    print(Fore.LIGHTRED_EX+'*' * 50)
     print()
-    print('    GAME INFO')
+    print(Fore.LIGHTYELLOW_EX+'    GAME INFO')
     print()
-    print('This is QUIZ for people who think they\
+    print(Fore.LIGHTBLUE_EX+'This is QUIZ for people who think they\
    KNOW  something about a AUTO World')
-    print('If you are one of them than E-ron-don-don!!!')
+    print(Fore.LIGHTBLUE_EX+'If you are one of them than E-ron-don-don!!!')
     print()
 
-    name = input('What is your name stranger?  ')
+    name = input(Fore.LIGHTBLUE_EX+'What is your name stranger?  ')
 
     if name.isnumeric():  # gives error if input numbers
-        print('Please use letters only  ')
-        name = input('What is your name stranger?  ')
+        print(Fore.LIGHTRED_EX+'Please use letters only  ')
+        name = input(Fore.LIGHTBLUE_EX+'What is your name stranger?  ')
     print()
 
     # validates the input
-    start = input(f"{name} are you ready\
+    start = input(Fore.LIGHTBLUE_EX+f"{name} are you ready\
  for a rummmmmmble? (Yes/No) ")
 
     while True:
@@ -127,7 +129,7 @@ def greetings():
             print('')
             while game.question_left():
                 game.n_question()  # prints the questions
-            print('    You finish this AUTO\
+            print(Fore.LIGHTYELLOW_EX+'    You finish this AUTO\
  Quiz. Thank you! See you later!!!')
             return True
 
@@ -136,11 +138,10 @@ def greetings():
             quit()
 
         else:
-            print("Invalid entry. Please try again  ")
+            print(Fore.LIGHTRED_EX+"Invalid entry. Please try again  ")
             print()
-            start = input(f"{name} are you\
+            start = input(Fore.LIGHTBLUE_EX+f"{name} are you\
  ready for a rummmmmmble? (Yes/No) ")
-
 
 prepare_quiz_questions()
 game = Game(question_list)
