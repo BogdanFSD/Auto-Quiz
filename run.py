@@ -53,8 +53,26 @@ def show_points(correct_attempts, attempts):
     score = int((correct_attempts/len(questions))*100)
     print("your score is " + str(score)+ "%")
 
+    restart()
+
 def restart():
-    pass
+    while True:
+        response = input("Do you want to continue? (Yes/No) ")
+
+        if response.lower() == "yes":
+            print("great")
+            start_game()
+            return True
+
+        elif response.lower() == "no":
+            print("BYEEE")
+            quit()
+
+        else:
+            print("Invalid entry. Yes or No")
+
+            continue
+
 
 
 
