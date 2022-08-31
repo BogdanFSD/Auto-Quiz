@@ -1,6 +1,11 @@
 from questions import question_list
+
 import random
 
+import colorama
+
+from colorama import Fore, Style
+colorama.init(autoreset=True)
 
 
 
