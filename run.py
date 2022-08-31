@@ -26,6 +26,9 @@ def start_game():
         correct_attempts += correct_answers(questions.get(question), attempt)
         question_num += 1
 
+    show_points(correct_attempts, attempts)
+
+
 def correct_answers(answer, attempt):
     if answer == attempt:
         print("corect")
@@ -34,8 +37,20 @@ def correct_answers(answer, attempt):
         print("wrong")
         return 0
 
-def show_points():
-    pass
+def show_points(correct_attempts, attempts):
+    print("*" * 10)
+    print("result")
+    print("Answers: ")
+    for i in questions:
+        print(questions.get(i))
+    print()
+
+    print("Attempts")
+    for i in attempts:
+        print(i)
+    print()
+
+    
 
 def restart():
     pass
