@@ -1,10 +1,6 @@
 # import randon to randomize questions
 import random
-# import colorama for colors
-import colorama
 
-from colorama import Fore, Style
-colorama.init(autoreset=True)
 # import questions for our Quiz
 
 from questions import question_list
@@ -44,9 +40,9 @@ class Game:
         following_q['options'] = '\n'.join(following_q['options'])
         self.q_number += 1  # increment question number
         while True:   # loop that validate users answer
-            user_answer = input(f"{Fore.LIGHTMAGENTA_EX}{self.q_number})\
- {following_q['question']}{nl}{empty_string}{nl}{Fore.LIGHTYELLOW_EX}\
-{following_q['options']}{nl} {empty_string}{Fore.LIGHTBLUE_EX}\
+            user_answer = input(f"{self.q_number})\
+ {following_q['question']}{nl}{empty_string}{nl}\
+{following_q['options']}{nl} {empty_string}\
  {nl}Please choose A, B, C or D  ").upper()  # prints question
             if user_answer in {"A", "B", "C", "D"}:
                 break  # validate answer
@@ -72,14 +68,14 @@ class Game:
         if user_answer.upper() == answer.upper():
             self.score += 1  # Once correct increment score
             print()
-            print(Fore.LIGHTGREEN_EX+'corect')
+            print('Corect')
             print()
         elif user_answer.upper() != answer.upper():
             self.score += 0  # once worn prints statement and add 0 to score
             print()
-            print(Fore.LIGHTRED_EX+'wrong')
+            print('Wrong')
             print()
-            print(f"correct is {answer}")  # shwos correct answer
+            print(f"Correct is {answer}")  # shwos correct answer
             print()
         # shows score overall till that question included
         print(f"Current score is {self.score} out of 10")
@@ -91,9 +87,9 @@ def greetings():
     functoins that asks the name of the user
     and prints out questions
     """
-    print(Fore.LIGHTRED_EX+'*' * 50)
+    print('*' * 50)
     print()
-    print(Fore.LIGHTMAGENTA_EX+'            WELCOME TO AUTO QUIZ')
+    print('            WELCOME TO AUTO QUIZ')
     print()
     print(r"""
                         ______--------___
@@ -104,24 +100,24 @@ def greetings():
       |  X  |\--------------/|  X  |\"
        \___/                  \___/
          """)
-    print(Fore.LIGHTRED_EX+'*' * 50)
+    print('*' * 50)
     print()
-    print(Fore.LIGHTYELLOW_EX+'    GAME INFO')
+    print('    GAME INFO')
     print()
-    print(Fore.LIGHTBLUE_EX+'This is QUIZ for people who think they\
+    print('This is QUIZ for people who think they\
    KNOW  something about a AUTO World')
-    print(Fore.LIGHTBLUE_EX+'If you are one of them than E-ron-don-don!!!')
+    print('If you are one of them than E-ron-don-don!!!')
     print()
 
-    name = input(Fore.LIGHTBLUE_EX+'What is your name stranger?  ')
+    name = input('What is your name stranger?  ')
 
     if name.isnumeric():  # gives error if input numbers
-        print(Fore.LIGHTRED_EX+'Please use letters only  ')
-        name = input(Fore.LIGHTBLUE_EX+'What is your name stranger?  ')
+        print('Please use letters only  ')
+        name = input('What is your name stranger?  ')
     print()
 
     # validates the input
-    start = input(Fore.LIGHTBLUE_EX+f"{name} are you ready\
+    start = input(f"{name} are you ready\
  for a rummmmmmble? (Yes/No) ")
 
     while True:
@@ -131,7 +127,7 @@ def greetings():
             print('')
             while game.question_left():
                 game.n_question()  # prints the questions
-            print(Fore.LIGHTYELLOW_EX+'    You finish this AUTO\
+            print('    You finish this AUTO\
  Quiz. Thank you! See you later!!!')
             return True
 
@@ -140,9 +136,9 @@ def greetings():
             quit()
 
         else:
-            print(Fore.LIGHTRED_EX+"Invalid entry. Please try again  ")
+            print("Invalid entry. Please try again  ")
             print()
-            start = input(Fore.LIGHTBLUE_EX+f"{name} are you\
+            start = input(f"{name} are you\
  ready for a rummmmmmble? (Yes/No) ")
 
 
