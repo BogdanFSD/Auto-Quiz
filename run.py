@@ -2,7 +2,7 @@
 import random
 # import colorama for colors
 from colorama import Fore
-colorama.init(autoreset=True)
+
 # import questions for our Quiz
 
 from questions import question_list
