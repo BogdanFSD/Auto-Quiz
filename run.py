@@ -5,7 +5,6 @@ def start_game():
     """
     function that runs all necessary fnuction to start
     """
-
     attempts = []
     correct_attempts = 0
     question_num = 0 # index of questions to help me itarate 
@@ -15,6 +14,17 @@ def start_game():
         print(question)
         for choice in choices[question_num]: 
             print(choice) 
+
+        while True:                    
+            attempt = input("Choose an answer A, B, C or D: ").upper()
+            if attempt in {"A", "B", "C", "D"}:
+                attempts.append(attempt)
+                break
+            else:
+                print("Invalid entry")
+
+        correct_attempts += correct_answers(questions.get(question), attempt)
+        question_num += 1
 
 def correct_answers():
     pass
