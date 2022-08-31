@@ -13,7 +13,16 @@ def prepare_quiz_questions():
    """
     random.shuffle(question_list)
 
-
+class Game:
+    """
+    This is the logic of the quiz.
+    That helps programm runs properly
+    and display everything in correct order
+    """
+    def __init__(self, que_list):
+        self.question_number = 0
+        self.score = 0
+        self.que_list = que_list
 
 
 
