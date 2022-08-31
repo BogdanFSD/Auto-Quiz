@@ -48,6 +48,13 @@ class Game:
                 print('Invalid entry. Please try again ')
                 print()
 
+        def question_left(self):
+        """
+        checks if any questions left after printed one
+        """
+        # returns true if we have another question
+        return self.q_number < len(self.que_list)
+
 
 
 
