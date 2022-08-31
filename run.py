@@ -1,13 +1,15 @@
 # import randon to randomize questions
-# import colorama for colors
-# import questions for our Quiz
 import random
-from questions import question_list
-
+# import colorama for colors
 import colorama
 
 from colorama import Fore, Style
 colorama.init(autoreset=True)
+# import questions for our Quiz
+
+from questions import question_list
+
+
 
 
 def prepare_quiz_questions():
@@ -142,6 +144,7 @@ def greetings():
             print()
             start = input(Fore.LIGHTBLUE_EX+f"{name} are you\
  ready for a rummmmmmble? (Yes/No) ")
+
 
 prepare_quiz_questions()
 game = Game(question_list)
