@@ -26,40 +26,42 @@ ore ", "D. Seoul "],
               "correctOption": "A"
               },
 
-              {
+             {
               "question": "What is the best selling car of all time? ",
               "options": ["A. Peugeot 206", "B. Volkswagen Golf", "C. F\
 iat 500", "D. Toyota Corolla"],
               "correctOption": "D"
               },
 
-              {
+             {
               "question": "What is Ford’s slogan? ",
               "options": ["A. Motion & Emotion", "B. Go Further", "C. A\
 bove & Beyond", "D. Do Anything"],
               "correctOption": "B"
               },
 
-              {
+             {
               "question": "Which colour is Mr Bean’s car? ",
               "options": ["A. Red", "B. Blue", "C. Green", "D. Yellow"],
               "correctOption": "C"
               },
-              {
+             {
               "question": "Which car company uses the tagline 'The ultimate d\
 riving machine'? ",
               "options": ["A. BMW", "B. Audi", "C. Toyota", "D. Ford"],
               "correctOption": "A"
               },
-              {
-              "question": "Who is known for inventing the gas-powered internal combustion engine? ",
+             {
+              "question": "Who is known for inventing the gas-powered internal\
+                 combustion engine? ",
               "options": ["A. Karl Benz", "B. Henry Ford", "C. Nicolaus Ott\
 o", "D. Frankenstein"],
               "correctOption": "C"
               },
-              {
+             {
               "question": "In the logo of Audi, how many rings are there? ",
-              "options": ["A. One", "B. Four", "C. Seven", "D. No rings there"],
+              "options": ["A. One", "B. Four", "C. Seven", "D. No rings \
+                there"],
               "correctOption": "B"
               }
 

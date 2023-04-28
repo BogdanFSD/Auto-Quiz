@@ -11,22 +11,22 @@ Please see live programm here [Auto-Quiz](https://auto-trivia.herokuapp.com/)
 
 
 # Contents
-    - [How to Play](#how-to-play)
-    - [User Experience](#user-experience)
-    - [Owner goals](#owner-goals)
-    - [Model](#model)
-    - [Features](#features)
-     - [User name](#user-name)
-     - [Start](#start)
-     - [Exit](#exit)
-     - [Questions](#questions)
-     - [Response](#response)
-     - [End game](#end-game)
-    - [PEP8 online](#pep8-online)
-    - [Input Testing](#Input Testing)
-    - [Deploy the project to Heroku](#deploy-the-project-on-heroku)
-    - [Credit](#credit)
-    - [Acknowledgement]{#acknowledgement}
+- [How to Play](#how-to-play)
+- [User Experience](#user-experience)
+- [Owner goals](#owner-goals)
+- [Model](#model)
+- [Features](#features)
+    - [User name](#user-name)
+    - [Start](#start)
+    - [Exit](#exit)
+    - [Questions](#questions)
+    - [Response](#response)
+    - [End game](#end-game)
+- [PEP8 online](#pep8-online)
+- [Input Testing](#Input Testing)
+- [Deploy the project to Heroku](#deploy-the-project-on-heroku)
+- [Credit](#credit)
+- [Acknowledgement](#acknowledgement)
 
 
 

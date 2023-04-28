@@ -6,8 +6,6 @@ import random
 from questions import question_list
 
 
-
-
 def prepare_quiz_questions():
     """
    Function that will randomize order of our
@@ -111,9 +109,12 @@ def greetings():
 
     name = input('What is your name stranger?  ')
 
-    if name.isnumeric():  # gives error if input numbers
-        print('Please use letters only  ')
-        name = input('What is your name stranger?  ')
+    while len(name.strip()) == 0:  # checks if the name is empty
+        print('Please enter not empty name.')
+        name = input('What is your name stranger? ')
+    while name.isnumeric():  # gives error if input numbers
+        print('Please use letters only.')
+        name = input('What is your name stranger? ')
     print()
 
     # validates the input
@@ -123,7 +124,7 @@ def greetings():
     while True:
 
         if start.lower() == "yes":
-            print("Awaesome")
+            print("Awesome")
             print()
             print('Please be carefull questions are TRICKY!!!')
             print()
@@ -142,6 +143,7 @@ def greetings():
             print()
             start = input(f"{name} are you\
  ready for a rummmmmmble? (Yes/No) ")
+
 
 prepare_quiz_questions()
 game = Game(question_list)
